@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手机自适应</title>
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <script>
+        var isRetina;
+        var metaEl = document.createElement('meta');
+        var scale = isRetina ? 0.5 : 1;
+        metaEl.setAttribute('name', 'viewport');
+        metaEl.setAttribute('content','initial-scale=' + scale + ',maximum-scale='+scale
+        +',minimum-scale='+ scale + ',user-scalable=no');
+        if(document.head.firstElementChild) {
+            document.head.firstElementChild.appendChild(metaEl);
+        } else {
+            var wrap = document.createElement('div');
+            wrap.appendChild(metaEl);
+            document.write(wrap.innerHTML);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
